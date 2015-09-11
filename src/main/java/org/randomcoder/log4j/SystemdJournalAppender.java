@@ -80,7 +80,7 @@ public class SystemdJournalAppender extends AppenderSkeleton {
       StringBuilder buf = new StringBuilder();
       buf.append(message);
       for (String line : event.getThrowableStrRep()) {
-        buf.append(LINE_SEPARATOR).append("\t").append(line);
+        buf.append(LINE_SEPARATOR).append(line);
       }
       message = buf.toString();
     }
