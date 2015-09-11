@@ -3,6 +3,10 @@
 
   <appender name="journalNoLayout" class="org.randomcoder.log4j.SystemdJournalAppender" />
 
+  <appender name="journalIdentifier" class="org.randomcoder.log4j.SystemdJournalAppender">
+    <param name="SyslogIdentifier" value="log4j-appender" />
+  </appender>
+  
   <appender name="journalLayout" class="org.randomcoder.log4j.SystemdJournalAppender">
     <layout class="org.apache.log4j.PatternLayout">
       <param name="ConversionPattern" value="%p %m%n" />
@@ -32,4 +36,9 @@
     <appender-ref ref="journalLocation" />
   </logger>
 
+  <logger name="id">
+    <level value="info" />
+    <appender-ref ref="journalIdentifier" />
+  </logger>
+  
 </log4j:configuration>

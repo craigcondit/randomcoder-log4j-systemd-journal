@@ -18,6 +18,7 @@ public class SystemdJournalAppender extends AppenderSkeleton {
 
   private static final String MDC_PREFIX = "LOG4J_MDC_";
   private boolean logLocationInformation = false;
+  private String syslogIdentifier = null;
 
   private final Systemd library;
 
@@ -47,6 +48,14 @@ public class SystemdJournalAppender extends AppenderSkeleton {
 
   public boolean isLogLocationInformation() {
     return logLocationInformation;
+  }
+
+  public void setSyslogIdentifier(String syslogIdentifier) {
+    this.syslogIdentifier = syslogIdentifier;
+  }
+
+  public String getSyslogIdentifier() {
+    return syslogIdentifier;
   }
 
   private boolean checkAppend() {
@@ -92,6 +101,11 @@ public class SystemdJournalAppender extends AppenderSkeleton {
       for (String line : event.getThrowableStrRep()) {
         buf.append(line).append(LINE_SEPARATOR);
       }
+    }
+
+    if (syslogIdentifier != null) {
+      args.add("SYSLOG_IDENTIFIER=%s");
+      args.add(syslogIdentifier);
     }
 
     if (isLogLocationInformation()) {
