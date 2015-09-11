@@ -1,0 +1,35 @@
+<!DOCTYPE log4j:configuration PUBLIC "-//APACHE//DTD LOG4J 1.2//EN" "log4j.dtd">
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
+
+  <appender name="journalNoLayout" class="org.randomcoder.log4j.SystemdJournalAppender" />
+
+  <appender name="journalLayout" class="org.randomcoder.log4j.SystemdJournalAppender">
+    <layout class="org.apache.log4j.PatternLayout">
+      <param name="ConversionPattern" value="%p %m%n" />
+    </layout>
+  </appender>
+
+  <appender name="journalLocation" class="org.randomcoder.log4j.SystemdJournalAppender">
+    <param name="LogLocationInformation" value="true" />
+    <layout class="org.apache.log4j.PatternLayout">
+      <param name="ConversionPattern" value="%p %m %C %M %F %L%n" />
+    </layout>
+  </appender>
+
+
+  <logger name="nolayout">
+    <level value="info" />
+    <appender-ref ref="journalNoLayout" />
+  </logger>
+
+  <logger name="layout">
+    <level value="info" />
+    <appender-ref ref="journalLayout" />
+  </logger>
+
+  <logger name="location">
+    <level value="info" />
+    <appender-ref ref="journalLocation" />
+  </logger>
+
+</log4j:configuration>
