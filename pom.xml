@@ -10,7 +10,7 @@
   <artifactId>randomcoder-log4j-systemd-journal</artifactId>
   <name>Randomcoder Log4J systemd journal Appender</name>
   <packaging>jar</packaging>
-  <version>1.0.3</version>
+  <version>1.0.4-SNAPSHOT</version>
   <inceptionYear>2015</inceptionYear>
   <url>https://randomcoder.org/nexus/content/sites/randomcoder-log4j-systemd-journal/</url>
   <description>
