@@ -4,7 +4,7 @@
   <parent>
     <groupId>org.randomcoder</groupId>
     <artifactId>randomcoder-base</artifactId>
-    <version>25</version>
+    <version>26</version>
   </parent>
   <groupId>org.randomcoder</groupId>
   <artifactId>randomcoder-log4j-systemd-journal</artifactId>
@@ -17,19 +17,12 @@
     This project is an appender for LOG4J which writes to the systemd journal.
   </description>
   <scm>
-    <connection>scm:git:https://randomcoder.org/scm/git/randomcoder-log4j-systemd-journal</connection>
-    <developerConnection>scm:git:https://randomcoder.org/scm/git/randomcoder-log4j-systemd-journal</developerConnection>
-    <url>https://randomcoder.org/cgit/public/randomcoder-log4j-systemd-journal</url>
+    <connection>scm:git:https://github.com/insideo/randomcoder-log4j-systemd-journal.git</connection>
+    <developerConnection>scm:git:git@github.com:insideo/randomcoder-log4j-systemd-journal.git</developerConnection>
+    <url>https://github.com/insideo/randomcoder-log4j-systemd-journal</url>
   </scm>
-  <distributionManagement>
-    <site>
-      <id>randomcoder-site</id>
-      <url>dav:https://${repository.host}/nexus/content/sites/${project.artifactId}</url>
-    </site>
-  </distributionManagement>
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <randomcoder.taglibs.version>1.6.10</randomcoder.taglibs.version>
     <junit.version>4.12</junit.version>
     <log4j.version>1.2.17</log4j.version>
     <jna.version>4.1.0</jna.version>
