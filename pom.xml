@@ -36,7 +36,26 @@
     <maven.compiler.plugin.version>3.3</maven.compiler.plugin.version>
     <maven.site.plugin.version>3.4</maven.site.plugin.version>
   </properties>
+  <repositories>
+    <repository>
+      <id>bintray-randomcoder-release</id>
+      <url>http://dl.bintray.com/insideo/randomcoder-release</url>
+      <releases>
+        <enabled>true</enabled>
+      </releases>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+    </repository>
+  </repositories>
   <build>
+    <extensions>
+      <extension>
+        <groupId>org.springframework.build</groupId>
+        <artifactId>aws-maven</artifactId>
+        <version>5.0.0.RELEASE</version>
+      </extension>
+    </extensions>
     <plugins>
       <plugin>
         <artifactId>maven-compiler-plugin</artifactId>
