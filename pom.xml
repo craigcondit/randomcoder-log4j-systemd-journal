@@ -4,7 +4,7 @@
   <parent>
     <groupId>org.randomcoder</groupId>
     <artifactId>randomcoder-base</artifactId>
-    <version>26</version>
+    <version>27</version>
   </parent>
   <groupId>org.randomcoder</groupId>
   <artifactId>randomcoder-log4j-systemd-journal</artifactId>
@@ -39,7 +39,7 @@
   <repositories>
     <repository>
       <id>bintray-randomcoder-release</id>
-      <url>http://dl.bintray.com/insideo/randomcoder-release</url>
+      <url>https://dl.bintray.com/insideo/randomcoder-release</url>
       <releases>
         <enabled>true</enabled>
       </releases>
