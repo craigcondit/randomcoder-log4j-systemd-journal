@@ -3,8 +3,8 @@
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <groupId>org.randomcoder</groupId>
-    <artifactId>randomcoder-base</artifactId>
-    <version>27</version>
+    <artifactId>randomcoder-parent</artifactId>
+    <version>1</version>
   </parent>
   <groupId>org.randomcoder</groupId>
   <artifactId>randomcoder-log4j-systemd-journal</artifactId>
@@ -12,7 +12,7 @@
   <packaging>jar</packaging>
   <version>1.0.7-SNAPSHOT</version>
   <inceptionYear>2015</inceptionYear>
-  <url>https://randomcoder.org/nexus/content/sites/randomcoder-log4j-systemd-journal/</url>
+  <url>https://github.com/insideo/randomcoder-log4j-systemd-journal</url>
   <description>
     This project is an appender for LOG4J which writes to the systemd journal.
   </description>
@@ -22,6 +22,25 @@
     <url>https://github.com/insideo/randomcoder-log4j-systemd-journal</url>
     <tag>HEAD</tag>
   </scm>
+  <developers>
+    <developer>
+      <id>ccondit</id>
+      <name>Craig Condit</name>
+      <email>ccondit@randomcoder.org</email>
+      <roles>
+        <role>architect</role>
+        <role>developer</role>
+      </roles>
+      <timezone>-7</timezone>
+    </developer>
+  </developers>
+  <licenses>
+    <license>
+      <name>New BSD License</name>
+      <url>http://www.opensource.org/licenses/bsd-license.php</url>
+      <distribution>repo</distribution>
+    </license>
+  </licenses>
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <junit.version>4.12</junit.version>
