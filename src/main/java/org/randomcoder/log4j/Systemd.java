@@ -4,6 +4,6 @@ import com.sun.jna.Library;
 
 public interface Systemd extends Library {
 
-  public int sd_journal_send(String format, Object... args);
+    public int sd_journal_send(String format, Object... args);
 
 }
